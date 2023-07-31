@@ -2,12 +2,12 @@
 
 #ifdef GAME_ENGINE_PLATFORM_WINDOWS
 
-#include <iostream>
+#include <Logger.h>
 
 extern GameEngine::Application* GameEngine::CreateApplication();
 
 int main(int argc, char** argv) {
-    std::cout << "GameEngine running!" << std::endl;
+    Log().Info("GameEngine running!");
     auto app = GameEngine::CreateApplication();
     app->Run();
     delete app;
