@@ -26,15 +26,9 @@ project "Logger"
 	}	
 
 	filter "system:windows"
-		cppdialect "C++17"
+		cppdialect "C++20"
 		staticruntime "On"
 		systemversion "latest"
-
-		defines
-		{
-			"GAME_ENGINE_PLATFORM_WINDOWS",
-			"GAME_ENGINE_BUILD_DLL"
-		}
 
 	filter "configurations:Debug"
 		defines "GAME_ENGINE_DEBUG"
@@ -64,6 +58,7 @@ project "GameEngine"
 	
 	includedirs
 	{
+		"%{prj.name}/src",
 		"Logger/src"
 	}
 	
@@ -73,7 +68,7 @@ project "GameEngine"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
+		cppdialect "C++20"
 		staticruntime "On"
 		systemversion "latest"
 
@@ -122,7 +117,7 @@ project "SandBox"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
+		cppdialect "C++20"
 		staticruntime "On"
 		systemversion "latest"
 

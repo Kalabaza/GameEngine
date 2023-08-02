@@ -9,3 +9,5 @@
 #else
     #error GameEngine only working on Windows!
 #endif
+
+#define BIT(x) (1 << x)

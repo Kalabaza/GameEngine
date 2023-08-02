@@ -7,7 +7,7 @@
 extern GameEngine::Application* GameEngine::CreateApplication();
 
 int main(int argc, char** argv) {
-    Log().Info("GameEngine running!");
+    Log().Info("GameEngine starting...");
     auto app = GameEngine::CreateApplication();
     app->Run();
     delete app;
